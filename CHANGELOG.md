@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3] - 2025-01-04
+
+### Added
+- Comprehensive test suite with 20 tests merged into single `test_sound_soup.py` file
+- Manual test script (`manual_test.py`) for end-to-end package verification
+- Test coverage for exceptions, AudioTag model, and AudioSoup core functionality
+
+### Changed
+- Consolidated all tests from separate files into one unified test file
+- Improved test organization with clear sections for different components
+
+### Removed
+- Deprecated separate test files (`test_core.py`, `test_models.py`, `test_exceptions.py`)
+
 ## [0.1.2] - 2025-01-04
 
 ### Changed
@@ -49,6 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Requires FFmpeg for audio processing
 - Python 3.9+ support
 
+[0.1.3]: https://github.com/PierrunoYT/sound-soup/releases/tag/v0.1.3
 [0.1.2]: https://github.com/PierrunoYT/sound-soup/releases/tag/v0.1.2
 [0.1.1]: https://github.com/PierrunoYT/sound-soup/releases/tag/v0.1.1
 [0.1.0]: https://github.com/PierrunoYT/sound-soup/releases/tag/v0.1.0

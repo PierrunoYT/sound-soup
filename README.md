@@ -107,11 +107,108 @@ A: We use `yt-dlp` which is actively maintained. If downloads fail, update `yt-d
 - FFmpeg (for audio processing)
 - ~140MB disk space for base Whisper model (2.9GB for large model)
 
+## Development
+
+### Setting Up Development Environment
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/sound-soup.git
+cd sound-soup
+```
+
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install in development mode with dev dependencies:
+```bash
+pip install -e ".[dev]"
+```
+
+4. Run tests:
+```bash
+pytest
+```
+
+### Building the Package
+
+To build distribution files:
+
+```bash
+# Install build tools
+python -m pip install build twine
+
+# Build the package
+python -m build
+```
+
+This creates both wheel (`.whl`) and source distribution (`.tar.gz`) files in the `dist/` directory.
+
+### Publishing to PyPI
+
+1. **Test on TestPyPI first** (recommended):
+```bash
+python -m twine upload --repository testpypi dist/*
+```
+
+2. **Install from TestPyPI to verify**:
+```bash
+pip install --index-url https://test.pypi.org/simple/ sound-soup
+```
+
+3. **Publish to PyPI**:
+```bash
+python -m twine upload dist/*
+```
+
+You'll need PyPI credentials. Set up API tokens at [pypi.org](https://pypi.org/manage/account/token/).
+
+### Project Structure
+
+```
+sound-soup/
+├── sound_soup/          # Main package
+│   ├── __init__.py      # Public API
+│   ├── core.py          # AudioSoup implementation
+│   ├── models.py        # Data models (Clip, etc.)
+│   └── exceptions.py    # Custom exceptions
+├── tests/               # Test suite
+├── examples/            # Usage examples
+├── pyproject.toml       # Package metadata & dependencies
+└── README.md            # This file
+```
+
+### Code Quality
+
+Format code with Black:
+```bash
+black sound_soup tests examples
+```
+
+Lint with Ruff:
+```bash
+ruff check sound_soup tests examples
+```
+
 ## License
 
 MIT
 
 ## Contributing
 
-Contributions welcome! Please open an issue or PR on GitHub.
+Contributions welcome! Please:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run tests (`pytest`)
+5. Format code (`black .`)
+6. Commit changes (`git commit -m 'Add amazing feature'`)
+7. Push to branch (`git push origin feature/amazing-feature`)
+8. Open a Pull Request
+
+For bug reports and feature requests, please [open an issue](https://github.com/yourusername/sound-soup/issues).
 

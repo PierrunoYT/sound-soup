@@ -9,7 +9,12 @@ pip install sound-soup
 ```
 
 **System Requirements:**
-- FFmpeg ([installation guide](https://ffmpeg.org/download.html))
+- **FFmpeg** (required for audio processing)
+  - **Windows**: Download from [ffmpeg.org](https://ffmpeg.org/download.html) or use `winget install ffmpeg`
+  - **macOS**: `brew install ffmpeg`
+  - **Linux**: `sudo apt install ffmpeg` (Ubuntu/Debian) or `sudo yum install ffmpeg` (RHEL/CentOS)
+
+All Python dependencies (openai-whisper, yt-dlp, pydub) are automatically installed with the package.
 
 ## Quick Start
 
@@ -113,7 +118,7 @@ A: We use `yt-dlp` which is actively maintained. If downloads fail, update `yt-d
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/sound-soup.git
+git clone https://github.com/PierrunoYT/sound-soup.git
 cd sound-soup
 ```
 
@@ -210,5 +215,5 @@ Contributions welcome! Please:
 7. Push to branch (`git push origin feature/amazing-feature`)
 8. Open a Pull Request
 
-For bug reports and feature requests, please [open an issue](https://github.com/yourusername/sound-soup/issues).
+For bug reports and feature requests, please [open an issue](https://github.com/PierrunoYT/sound-soup/issues).
 

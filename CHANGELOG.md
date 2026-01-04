@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2025-01-04
+
+### Changed
+- Enhanced installation documentation with platform-specific FFmpeg installation instructions
+- Clarified that all Python dependencies are automatically installed with the package
+- Verified dependency configuration ensures proper installation of openai-whisper, yt-dlp, and pydub
+
+## [0.1.1] - 2025-01-04
+
+### Added
+- Development setup instructions in README
+- Package building and publishing guidelines
+- Project structure overview
+- Code quality tools usage (Black, Ruff)
+- TestPyPI publishing workflow documentation
+
 ## [0.1.0] - 2024-01-XX
 
 ### Added
@@ -33,5 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Requires FFmpeg for audio processing
 - Python 3.9+ support
 
-[0.1.0]: https://github.com/yourusername/sound-soup/releases/tag/v0.1.0
+[0.1.2]: https://github.com/PierrunoYT/sound-soup/releases/tag/v0.1.2
+[0.1.1]: https://github.com/PierrunoYT/sound-soup/releases/tag/v0.1.1
+[0.1.0]: https://github.com/PierrunoYT/sound-soup/releases/tag/v0.1.0
 
